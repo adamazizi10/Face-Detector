@@ -1,7 +1,7 @@
 import React from 'react';
-import './Rank.css';
-const Rank = ({name, entries}) => {
-    return ( 
+
+const Rank = ({ name, entries }) => {
+    return (
         <div>
             <div className='white f3 testRank'>
                 {`${name}, Your current rank is...`}

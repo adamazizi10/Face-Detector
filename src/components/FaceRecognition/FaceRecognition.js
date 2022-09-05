@@ -1,6 +1,5 @@
 import React from 'react';
 import './FaceRecognition.css';
-import Footer from '../Footer/Footer';
 
 const FaceRecognition = ({ imageUrl, box }) => {
     return (

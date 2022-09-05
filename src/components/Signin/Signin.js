@@ -3,7 +3,7 @@ import './Signin.css';
 import { FaEnvelope, FaLock, FaChevronRight } from 'react-icons/fa';
 
 class Signin extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             signInEmail: '',
@@ -12,38 +12,37 @@ class Signin extends React.Component {
     }
 
     onEmailChange = (event) => {
-        this.setState({signInEmail: event.target.value})
+        this.setState({ signInEmail: event.target.value })
     }
 
     onPasswordChange = (event) => {
-        this.setState({signInPassword: event.target.value})
+        this.setState({ signInPassword: event.target.value })
     }
 
     onSubmitSignIn = () => {
         fetch('https://lit-taiga-06669.herokuapp.com/signin', {
             method: 'post',
-            headers: {'content-type': 'application/json'},
+            headers: { 'content-type': 'application/json' },
             body: JSON.stringify({
                 email: this.state.signInEmail,
                 password: this.state.signInPassword
             })
 
         })
-          .then(response => response.json())
-          .then(user => {
-            if(user.id)
-            {
-                this.props.loadUser(user)
-                this.props.onRouteChange('home')
-            }
-        })
+            .then(response => response.json())
+            .then(user => {
+                if (user.id) {
+                    this.props.loadUser(user)
+                    this.props.onRouteChange('home')
+                }
+            })
     }
 
-    render(){
+    render() {
         const { onRouteChange } = this.props;
         return (
             <div>
-                <div  className="containerSignin">
+                <div className="containerSignin">
                     <div className="screen">
                         <div className="screen__content">
                             <div className="login">

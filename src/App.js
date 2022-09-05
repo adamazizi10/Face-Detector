@@ -8,19 +8,8 @@ import Signin from './components/Signin/Signin';
 import Rank from './components/Rank/Rank';
 import './App.css';
 import SocialMediaBar from './components/SocialMediaBar/SocialMediaBar';
- 
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 30,
-      density: {
-        enable: true,
-        value_area: 800
-      }
-    }
-  }
-}
-const initialState  = {
+
+const initialState = {
   input: '',
   imageUrl: '',
   box: {},
@@ -41,13 +30,15 @@ class App extends Component {
   }
 
   loadUser = (data) => {
-    this.setState({user: {
-      id: data.id,
-      name: data.name,
-      email: data.email,
-      entries: data.entries,
-      joined: data.joined
-    }})
+    this.setState({
+      user: {
+        id: data.id,
+        name: data.name,
+        email: data.email,
+        entries: data.entries,
+        joined: data.joined
+      }
+    })
   }
 
   calculateFaceLocation = (data) => {
@@ -76,31 +67,31 @@ class App extends Component {
     this.setState({ imageUrl: this.state.input });
     fetch('https://lit-taiga-06669.herokuapp.com/imageurl', {
       method: 'post',
-      headers: {'Content-Type': 'application/json'},
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         input: this.state.input
       })
     })
-    .then(response => response.json())
+      .then(response => response.json())
       .then(response => {
         if (response) {
           fetch('https://lit-taiga-06669.herokuapp.com/image', {
             method: 'put',
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               id: this.state.user.id
             })
           })
             .then(response => response.json())
             .then(count => {
-              this.setState(Object.assign(this.state.user, { entries: count}))
+              this.setState(Object.assign(this.state.user, { entries: count }))
             })
             .catch(console.log)
 
         }
         this.displayFaceBox(this.calculateFaceLocation(response))
       })
-      .catch(err => console.log('The error is: ' , err));
+      .catch(err => console.log('The error is: ', err));
   }
 
 
@@ -115,25 +106,20 @@ class App extends Component {
   }
 
   render() {
-    const { isSignedIn, imageUrl, route, box , user} = this.state;
+    const { isSignedIn, imageUrl, route, box, user } = this.state;
 
     return (
       <div className="App">
-        {/* <Particles className='particles'
-          params={particlesOptions}
-        /> */}
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         <SocialMediaBar />
         {route === 'home'
           ? <div>
             <br /><br /><br />
-            <Rank 
+            <Rank
               name={user.name}
-              entries={user.entries}/>
+              entries={user.entries} />
             <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
             <FaceRecognition box={box} imageUrl={imageUrl} />
-
-
           </div>
           : (
             route === 'Signin'
