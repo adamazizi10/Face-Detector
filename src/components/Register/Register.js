@@ -23,7 +23,6 @@ class Register extends React.Component {
         this.setState({ registerEmail: event.target.value })
     }
     onRegisterPasswordChange = (event) => {
-        if ((event.target.values).includes('@'))
             this.setState({ registerPassword: event.target.value })
     }
 
@@ -49,7 +48,7 @@ class Register extends React.Component {
 
     render() {
         return (
-            <div>
+            <form onSubmit={this.onRegisterClick} action='#'>
                 <div className="containerRegister">
                     <div className="screen">
                         <div className="screen__content">
@@ -66,7 +65,7 @@ class Register extends React.Component {
                                     <i className="login__icon"><FaLock /></i>
                                     <input type="password" className="login__input" placeholder="Enter your Password" onChange={this.onRegisterPasswordChange} />
                                 </div>
-                                <button onClick={this.onRegisterClick} className="button login__submit">
+                                <button type='submit' className="button login__submit">
                                     <span className="button__text">Register</span>
                                 </button>
                             </div>
@@ -85,7 +84,7 @@ class Register extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
 
 
         );

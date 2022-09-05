@@ -41,7 +41,7 @@ class Signin extends React.Component {
     render() {
         const { onRouteChange } = this.props;
         return (
-            <div>
+            <form onSubmit={this.onSubmitSignIn} action='#'>
                 <div className="containerSignin">
                     <div className="screen">
                         <div className="screen__content">
@@ -54,7 +54,7 @@ class Signin extends React.Component {
                                     <i className="login__icon"><FaLock /></i>
                                     <input onChange={this.onPasswordChange} type="password" className="login__input" placeholder="Enter your Password" />
                                 </div>
-                                <button onClick={this.onSubmitSignIn} className="button login__submit">
+                                <button  type='submit' className="button login__submit">
                                     <span>Log In Now</span>
                                     <i className='button__icon'><FaChevronRight /></i>
                                 </button>
@@ -74,7 +74,7 @@ class Signin extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         );
     }
 }

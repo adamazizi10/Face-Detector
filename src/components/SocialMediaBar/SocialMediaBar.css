@@ -74,5 +74,10 @@ body {
 .githubSpecific {
 
     line-height: 77px;
-
+}
+.youtubeSpecific{
+    line-height: 73px;
+}
+.instagramSpecific{
+    line-height: 74px;
 }
