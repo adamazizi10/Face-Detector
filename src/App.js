@@ -4,10 +4,10 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Register from './components/Register/Register';
-import Footer from './components/Footer/Footer';
 import Signin from './components/Signin/Signin';
 import Rank from './components/Rank/Rank';
 import './App.css';
+import SocialMediaBar from './components/SocialMediaBar/SocialMediaBar';
  
 const particlesOptions = {
   particles: {
@@ -123,9 +123,10 @@ class App extends Component {
           params={particlesOptions}
         /> */}
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
+        <SocialMediaBar />
         {route === 'home'
           ? <div>
-            <br /><br /><br /><br />
+            <br /><br /><br />
             <Rank 
               name={user.name}
               entries={user.entries}/>

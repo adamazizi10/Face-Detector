@@ -2,7 +2,7 @@ import React from 'react';
 import './Register.css';
 import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
 
-import Footer from '../Footer/Footer';
+
 
 class Register extends React.Component {
     constructor(props){
@@ -14,6 +14,7 @@ class Register extends React.Component {
         }
     }
 
+
     onRegisterNameChange = (event) => {
         this.setState({registerName: event.target.value})
     }
@@ -22,6 +23,7 @@ class Register extends React.Component {
         this.setState({registerEmail: event.target.value})
     }
     onRegisterPasswordChange =(event) => {
+        if((event.target.values).includes('@'))
         this.setState({registerPassword: event.target.value})
     }
     
@@ -84,22 +86,6 @@ class Register extends React.Component {
                     </div>
                 </div>
             </div>
-            {/* <div className='mainFooterforSignin'>
-                <footer className='referral-wrapper-for-footer'>
-
-                    <div className='copy-wrapper-footerforSignin'>
-                        <div id="copy">
-                            Copyright © 2020 — The Wise Foundation
-                        </div>
-                        <div id="links">
-                            <a href="#">Privacy</a>
-                            <a href="#">Terms</a>
-                            <a href="#">Contact</a>
-                        </div>
-                    </div>
-                </footer>
-            </div> */}
-            <Footer />
         </div>
 
 

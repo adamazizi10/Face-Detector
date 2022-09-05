@@ -11,10 +11,10 @@ const Footer = () => {
                        <div id="copy">
                        </div>
                        <div className="linksFooter">
-                           <a href="#"><FaGithub />  Github</a>
-                           <a href="#"><FaLinkedinIn/>  LinkedIn</a>
-                           <a href="#"><FaUser/>  Website</a>
-                           <a href="#"><FaEnvelope/>  Email</a>
+                           <a className='indLinksFooter' href="#"><FaGithub />Github</a>
+                           <a className='indLinksFooter' href="#"><FaLinkedinIn/>LinkedIn</a>
+                           <a className='indLinksFooter' href="#"><FaUser/>Website</a>
+                           <a className='indLinksFooter' href="#"><FaEnvelope/>Email</a>
                        </div>
                    </div>
                 </footer>

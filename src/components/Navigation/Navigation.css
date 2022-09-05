@@ -12,36 +12,14 @@ background-blend-mode: multiply;
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-*{
-  margin: 0;
-  padding: 0; 
-  box-sizing: content;
-  text-decoration: none;
-  font-family: Ubuntu;
 
-}
 
-body{
-  max-width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-}
-
-a, a:hover, a:focus, a:active {
-      text-decoration: none;
-      color: inherit;
-}
-
-li {
+.liNav {
   list-style: none;
   font-size: 1.2em;
 } 
 
-ul li{
-  padding-left: 60px;
-}
+
 
 
 

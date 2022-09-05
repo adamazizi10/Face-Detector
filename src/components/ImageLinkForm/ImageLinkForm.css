@@ -12,36 +12,8 @@ background-blend-mode: multiply;
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-*{
-  margin: 0;
-  padding: 0; 
-  box-sizing: content;
-  text-decoration: none;
-  font-family: Ubuntu;
 
-}
 
-body{
-  max-width: 100%;
-  heigth: auto;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-}
-
-a, a:hover, a:focus, a:active {
-      text-decoration: none;
-      color: inherit;
-}
-
-li {
-  list-style: none;
-  font-size: 1.2em;
-} 
-
-ul li{
-  padding-left: 60px;
-}
 
 
 
@@ -50,11 +22,7 @@ ul li{
   color: #524851;
 }
 
-h2{
-  padding-top: 30px;
-  padding-bottom: 10px;
- 
-}
+
 
 .mainForImg{
   padding-top: 5%;
@@ -66,12 +34,7 @@ h2{
   
 }
 
-header{
-  width: 100%;
-  height: auto;
-  position: relative;
-  color:#29abb5;
-}
+
 
 /* footer{
   max-width: 100%;

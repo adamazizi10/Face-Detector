@@ -1,6 +1,5 @@
 import React from 'react';
 import './Signin.css';
-import Footer from '../Footer/Footer';
 import { FaEnvelope, FaLock, FaChevronRight } from 'react-icons/fa';
 
 class Signin extends React.Component {
@@ -76,7 +75,6 @@ class Signin extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Footer />
             </div>
         );
     }
