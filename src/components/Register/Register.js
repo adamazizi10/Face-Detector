@@ -1,78 +1,92 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Register.css';
 import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
+import CustomFunctions from '../../CustomFunctions/CustomFunctions';
+
+const { isPasswordValid, isNameValid, isEmailValid} = CustomFunctions;
+function Register({loadUser, onRouteChange}){
+
+    const [Name, setName] = useState('');
+    const [NameError, setNameError] = useState('');
+    const [Email, setEmail] = useState('');
+    const [EmailError, setEmailError] = useState('');
+    const [Password, setPassword] = useState('');
+    const [PasswordError, setPasswordError] = useState('');
 
 
 
-class Register extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            registerName: '',
-            registerEmail: '',
-            registerPassword: ''
+    const onRegisterNameChange = (event) => {
+        setName(event.target.value)
+    }
+
+    const onRegisterEmailChange = (event) => {
+        setEmail(event.target.value)
+    }
+
+    const onRegisterPasswordChange = (event) => { 
+        setPassword(event.target.value);
+    }
+
+    const onRegisterClick = (event) => {
+        if(isPasswordValid(Password) && isNameValid(Name) && isEmailValid(Email))
+        {
+            setNameError('')
+            setEmailError('')
+            setPasswordError('')
+            event.preventDefault()
+            fetch('https://lit-taiga-06669.herokuapp.com/register', {
+                method: 'post',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify({
+                    name: Name,
+                    email: Email,
+                    password: Password
+                })
+            })
+                .then(response => response.json())
+                .then(user => {
+                    if (user.id) {
+                        loadUser(user);
+                        onRouteChange('home');
+                    }
+    
+                })
+        }
+        else{
+            !isNameValid(Name)? setNameError('Name error') : setNameError('')
+            !isEmailValid(Email)? setEmailError('email error') : setEmailError('')
+            !isPasswordValid(Password)? setPasswordError('password error') : setPasswordError('')
         }
     }
-
-
-    onRegisterNameChange = (event) => {
-        this.setState({ registerName: event.target.value })
-    }
-
-    onRegisterEmailChange = (event) => {
-        this.setState({ registerEmail: event.target.value })
-    }
-    onRegisterPasswordChange = (event) => {
-            this.setState({ registerPassword: event.target.value })
-    }
-
-    onRegisterClick = () => {
-        fetch('https://lit-taiga-06669.herokuapp.com/register', {
-            method: 'post',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({
-                name: this.state.registerName,
-                email: this.state.registerEmail,
-                password: this.state.registerPassword
-            })
-        })
-            .then(response => response.json())
-            .then(user => {
-                if (user.id) {
-                    this.props.loadUser(user);
-                    this.props.onRouteChange('home');
-                }
-
-            })
-    }
-
-    render() {
         return (
-            <form onSubmit={this.onRegisterClick} action='#'>
+            <div>
                 <div className="containerRegister">
                     <div className="screen">
                         <div className="screen__content">
                             <div className="RegisterForm">
                                 <div className="login__field">
                                     <i className="login__icon"><FaUser /></i>
-                                    <input type="text" className="login__input" placeholder="Enter your Name" onChange={this.onRegisterNameChange} />
+                                    <input type="text" className="login__input" placeholder="Enter your Name" onChange={onRegisterNameChange} />
+                                    <p>{NameError}</p>
                                 </div>
                                 <div className="login__field">
                                     <i className="login__icon"><FaEnvelope /></i>
-                                    <input type="email" className="login__input" placeholder="Enter your Email" onChange={this.onRegisterEmailChange} />
+                                    <input type="email" className="login__input" placeholder="Enter your Email" onChange={onRegisterEmailChange} />
+                                    <p>{EmailError}</p>
                                 </div>
                                 <div className="login__field">
                                     <i className="login__icon"><FaLock /></i>
-                                    <input type="password" className="login__input" placeholder="Enter your Password" onChange={this.onRegisterPasswordChange} />
+                                    <input type="password" className="login__input" placeholder="Enter your Password" onChange={onRegisterPasswordChange} />
+                                    <p>{PasswordError}</p>
                                 </div>
-                                <button type='submit' className="button login__submit">
+                                <button onClick={onRegisterClick} className="button login__submit">
                                     <span className="button__text">Register</span>
                                 </button>
                             </div>
                             <div className="NewMemberText">
                                 <h3>Already a Member?</h3>
                                 <div className="RegisterClick">
-                                    <p onClick={() => this.onRouteChange('Signin')}>Login</p>
+                                    <p onClick={() => onRouteChange('Signin')}>Login</p>
                                 </div>
                             </div>
                         </div>
@@ -84,11 +98,10 @@ class Register extends React.Component {
                         </div>
                     </div>
                 </div>
-            </form>
+            </div>
 
 
         );
-    }
 }
 
 export default Register;

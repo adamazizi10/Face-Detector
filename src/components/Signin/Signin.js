@@ -11,6 +11,7 @@ class Signin extends React.Component {
         }
     }
 
+    
     onEmailChange = (event) => {
         this.setState({ signInEmail: event.target.value })
     }
@@ -19,12 +20,13 @@ class Signin extends React.Component {
         this.setState({ signInPassword: event.target.value })
     }
 
-    onSubmitSignIn = () => {
+    onSubmitSignIn = (event) => {
+        event.preventDefault();
         fetch('https://lit-taiga-06669.herokuapp.com/signin', {
             method: 'post',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({
-                email: this.state.signInEmail,
+                email: this.state.signInEmail.toLowerCase(),
                 password: this.state.signInPassword
             })
 
@@ -41,7 +43,7 @@ class Signin extends React.Component {
     render() {
         const { onRouteChange } = this.props;
         return (
-            <form onSubmit={this.onSubmitSignIn} action='#'>
+            <form onSubmit={this.onSubmitSignIn} action=''>
                 <div className="containerSignin">
                     <div className="screen">
                         <div className="screen__content">
