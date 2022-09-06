@@ -34,7 +34,8 @@ function Register({loadUser, onRouteChange}){
             setEmailError('')
             setPasswordError('')
             event.preventDefault()
-            fetch('https://lit-taiga-06669.herokuapp.com/register', {
+            // fetch('https://lit-taiga-06669.herokuapp.com/register', {
+            fetch('http://localhost:3003/register', {
                 method: 'post',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify({
@@ -45,13 +46,16 @@ function Register({loadUser, onRouteChange}){
             })
                 .then(response => response.json())
                 .then(user => {
-                    if (user.id) {
+                    if (user.email) {
                         loadUser(user);
                         onRouteChange('home');
                     }
+                    else{
+                        setEmailError('email error')
+                    }
     
                 })
-        }
+        } 
         else{
             !isNameValid(Name)? setNameError('Name error') : setNameError('')
             !isEmailValid(Email)? setEmailError('email error') : setEmailError('')
@@ -67,17 +71,17 @@ function Register({loadUser, onRouteChange}){
                                 <div className="login__field">
                                     <i className="login__icon"><FaUser /></i>
                                     <input type="text" className="login__input" placeholder="Enter your Name" onChange={onRegisterNameChange} />
-                                    <p>{NameError}</p>
+                                    <p style={{color: 'red'}}>{NameError}</p>
                                 </div>
                                 <div className="login__field">
                                     <i className="login__icon"><FaEnvelope /></i>
                                     <input type="email" className="login__input" placeholder="Enter your Email" onChange={onRegisterEmailChange} />
-                                    <p>{EmailError}</p>
+                                    <p style={{color: 'red'}}>{EmailError}</p>
                                 </div>
                                 <div className="login__field">
                                     <i className="login__icon"><FaLock /></i>
                                     <input type="password" className="login__input" placeholder="Enter your Password" onChange={onRegisterPasswordChange} />
-                                    <p>{PasswordError}</p>
+                                    <p style={{color: 'red'}}>{PasswordError}</p>
                                 </div>
                                 <button onClick={onRegisterClick} className="button login__submit">
                                     <span className="button__text">Register</span>
