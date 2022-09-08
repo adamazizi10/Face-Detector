@@ -2,7 +2,7 @@ import React from 'react';
 import './Navigation.css';
 import faceDetectPic from './faceDetectPic.png';
 
-const Navigation = ({ onRouteChange, isSignedIn }) => {
+function Navigation ({ onRouteChange, isSignedIn, route}) {
     return (
         <header className="header">
             <nav className='nav-bar-Navigation'>
@@ -12,10 +12,14 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
                 </div>
                 <ul className="nav-link">
                     {isSignedIn
-                        ? <li className='liNav' ><p onClick={() => onRouteChange('Signin')} className='f3 link dim black underline pa3 pointer'>Sign Out</p></li>
+                        ? <div style={{ display: 'flex' }}>
+                            <li className='liNav'><p style={route === 'home' ? {backgroundColor:'13e47e', borderRadius: '15px'} : {}} onClick={() => onRouteChange('home')} className='f3 link black underline pa3 pointer'>Home</p></li>
+                            <li className='liNav' ><p style={route === 'Profile' ? {backgroundColor:'#13e47e', borderRadius: '15px'} : {}} onClick={() => onRouteChange('Profile')} className='f3 link black underline pa3 pointer'>Profile</p></li>
+                            <li className='liNav' ><p style={route === 'Signin' ? {backgroundColor:'#13e47e', borderRadius: '15px'} : {}} onClick={() => onRouteChange('Signin')} className='f3 link black underline pa3 pointer'>Sign Out</p></li>
+                        </div>
                         : <div style={{ display: 'flex' }}>
-                            <li className='liNav'><p onClick={() => onRouteChange('Signin')} className='f3 link dim black underline pa3 pointer'>Sign In</p></li>
-                            <li className='liNav'><p onClick={() => onRouteChange('register')} className='f3 link dim black underline pa3 pointer'>Register</p></li>
+                            <li className='liNav'><p style={route === 'Signin' ? {backgroundColor:'#13e47e', borderRadius: '15px'} : {}} onClick={() => onRouteChange('Signin')} className='f3 link black underline pa3 pointer'>Sign In</p></li>
+                            <li className='liNav'><p style={route === 'register' ? {backgroundColor:'#13e47e', borderRadius: '15px'} : {}} onClick={() => onRouteChange('register')} className='f3 link black underline pa3 pointer'>Register</p></li>
                         </div>}
                 </ul>
             </nav>

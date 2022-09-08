@@ -7,7 +7,12 @@
 	font-family: Raleway, sans-serif;
 }
 
-
+.alert{
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
 .containerRegister {
 	display: flex;
 	align-items: center;
@@ -88,7 +93,11 @@
 	padding: 30px;
 	padding-top: 100px;
 }
-
+.UpdateForm {
+	width: 320px;
+	padding: 30px;
+	padding-top: 34px;
+}
 .login__field {
 	padding: 20px 0px;
 	position: relative;
@@ -186,3 +195,43 @@
 	margin: 0 auto;
 
 }
+
+/* Popup container - can be anything you want */
+.popup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+	visibility: hidden;
+	width: 160px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+  }
+  

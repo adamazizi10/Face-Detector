@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-// import Particles from 'react-particles-js';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Register from './components/Register/Register';
 import Signin from './components/Signin/Signin';
-import Rank from './components/Rank/Rank';
-import './App.css';
 import SocialMediaBar from './components/SocialMediaBar/SocialMediaBar';
+import Profile from './components/Profile/Profile';
+import './App.css';
+
+
 
 const initialState = {
   input: '',
@@ -23,6 +24,7 @@ const initialState = {
     joined: ''
   }
 }
+// const newJoinedDate = initialState.user.joined.toString().substring(0, initialState.user.joined.length -1)
 class App extends Component {
   constructor() {
     super();
@@ -40,7 +42,7 @@ class App extends Component {
       }
     })
   }
-
+  
   calculateFaceLocation = (data) => {
     const clarafaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputimage');
@@ -65,7 +67,8 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch('https://lit-taiga-06669.herokuapp.com/imageurl', {
+    // fetch('https://lit-taiga-06669.herokuapp.com/imageurl', {
+      fetch('http://localhost:3003/imageurl', {  
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -75,7 +78,8 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://lit-taiga-06669.herokuapp.com/image', {
+          // fetch('https://lit-taiga-06669.herokuapp.com/image', {
+            fetch('http://localhost:3003/image', {
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -104,27 +108,27 @@ class App extends Component {
     }
     this.setState({ route: route })
   }
-
   render() {
-    const { isSignedIn, imageUrl, route, box, user } = this.state;
+    const { isSignedIn, imageUrl, route, box, user} = this.state;
 
     return (
+      
       <div className="App">
-        <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
+        <Navigation route={route} isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         <SocialMediaBar />
         {route === 'home'
           ? <div>
             <br /><br /><br />
-            <Rank
-              name={user.name}
-              entries={user.entries} />
             <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
             <FaceRecognition box={box} imageUrl={imageUrl} />
           </div>
           : (
             route === 'Signin'
               ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
-              : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
+              :(route ==='Profile'
+                ? <Profile name={user.name} email={user.email} entries={user.entries} joined={user.joined} loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
+                : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
+                )
           )}
 
 
