@@ -1,27 +1,26 @@
 import React from 'react';
 import './Navigation.css';
 import faceDetectPic from './faceDetectPic.png';
-
+import DropdownNav from '../DropdownNav/Dropdownnav';
 function Navigation ({ onRouteChange, isSignedIn, route}) {
+    
     return (
         <header className="header">
             <nav className='nav-bar-Navigation'>
                 <div id="title">
-                    <img alt='' src={faceDetectPic} id="header-img" />
-                    <h1 className='colorForNavText'>Face Detector </h1>
-                </div>
-                <ul className="nav-link">
                     {isSignedIn
-                        ? <div style={{ display: 'flex' }}>
-                            <li className='liNav'><p style={route === 'home' ? {backgroundColor:'13e47e', borderRadius: '15px'} : {}} onClick={() => onRouteChange('home')} className='f3 link black underline pa3 pointer'>Home</p></li>
-                            <li className='liNav' ><p style={route === 'Profile' ? {backgroundColor:'#13e47e', borderRadius: '15px'} : {}} onClick={() => onRouteChange('Profile')} className='f3 link black underline pa3 pointer'>Profile</p></li>
-                            <li className='liNav' ><p style={route === 'Signin' ? {backgroundColor:'#13e47e', borderRadius: '15px'} : {}} onClick={() => onRouteChange('Signin')} className='f3 link black underline pa3 pointer'>Sign Out</p></li>
-                        </div>
-                        : <div style={{ display: 'flex' }}>
-                            <li className='liNav'><p style={route === 'Signin' ? {backgroundColor:'#13e47e', borderRadius: '15px'} : {}} onClick={() => onRouteChange('Signin')} className='f3 link black underline pa3 pointer'>Sign In</p></li>
-                            <li className='liNav'><p style={route === 'register' ? {backgroundColor:'#13e47e', borderRadius: '15px'} : {}} onClick={() => onRouteChange('register')} className='f3 link black underline pa3 pointer'>Register</p></li>
-                        </div>}
-                </ul>
+                    ?<div style={{display: 'flex'}}>
+                        <img alt='' onClick={() => onRouteChange('home')}  className='pointer' src={faceDetectPic} id="header-img" />
+                        <h1 onClick={() => onRouteChange('home')} className='colorForNavText pointer'>Face Detector </h1>
+                     </div>
+
+                    :<div style={{display: 'flex'}}>
+                        <img alt='' onClick={() => onRouteChange('Signin')}  className='pointer' src={faceDetectPic} id="header-img" />
+                        <h1 onClick={() => onRouteChange('Signin')} className='colorForNavText pointer'>Face Detector </h1>
+                     </div>
+                    }
+                </div>
+                <DropdownNav route={route} isSignedIn={isSignedIn} onRouteChange={onRouteChange} />
             </nav>
         </header>
     )

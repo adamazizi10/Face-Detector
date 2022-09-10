@@ -19,8 +19,9 @@ var pattern = new RegExp(PasswordRegex);
 const isPasswordValid = (Password) => (Password.length < 8 || !isAllPresent(Password)) ? false: true;
 const isPasswordEmpty = (Password) => (Password.length === 0) ? true : false;
 const displayPasswordSpecifications = <p className="w-90 ba br2 pa3 ma2 red bg-washed-green">Password Must contain: <br />-at least 8 characters<br />-at least one uppercase letter<br />-at least one lowercase letter<br />-at least one numeric value<br />-at least one special character</p>;
+const displayPasswordSpecificationsC = <p className="w-100 ba br2 pa3 ma2 red bg-washed-green">Password Must contain: <br />-at least 8 characters<br />-at least one uppercase letter<br />-at least one lowercase letter<br />-at least one numeric value<br />-at least one special character</p>;
 
-const CustomFunctions = { isNameValid, isEmailValid, isPasswordValid, isAllPresent, isPasswordEmpty, isEmailEmpty, displayPasswordSpecifications };
+const CustomFunctions = { displayPasswordSpecificationsC, isNameValid, isEmailValid, isPasswordValid, isAllPresent, isPasswordEmpty, isEmailEmpty, displayPasswordSpecifications };
 export default CustomFunctions;
 
 

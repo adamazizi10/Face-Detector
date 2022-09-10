@@ -8,27 +8,27 @@ const SocialMediaBar = () => {
             <ul>
                 <li>
                     <a href="https://www.linkedin.com" rel="noreferrer" target="_blank">
-                        <i><FaLinkedinIn size={'1.8rem'} /></i>
+                        <i><FaLinkedinIn size={'1.8rem'} style={{marginBottom: '14px'}} /></i>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.github.com" rel="noreferrer" target="_blank">
-                        <i className='githubSpecific'><FaGithub color={'white'} size={'2.2rem'} /></i>
+                        <i className='githubSpecific'><FaGithub color={'white'} size={'2.2rem'} style={{marginBottom: '22px'}}/></i>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.youtube.com" rel="noreferrer" target="_blank">
-                        <i className="youtubeSpecific"><FaYoutube size={'1.8rem'} /></i>
+                        <i className="youtubeSpecific"><FaYoutube size={'1.8rem'} style={{marginBottom: '20px'}}/></i>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.instagram.com" rel="noreferrer" target="_blank">
-                        <i className="instagramSpecific"><FaInstagram size={'1.8rem'} /></i>
+                        <i className="instagramSpecific"><FaInstagram size={'1.8rem'} style={{marginBottom: '21px'}} /></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.twitter.com" rel="noreferrer" target="_blank">
-                        <i><FaTwitter size={'1.8rem'} /></i>
+                    <a href="https://www.twitter.com"  rel="noreferrer" target="_blank">
+                        <i><FaTwitter size={'1.8rem'} style={{marginBottom: '12px'}} /></i>
                     </a>
                 </li>
 

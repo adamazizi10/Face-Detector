@@ -55,7 +55,7 @@ function Signin({ onRouteChange, loadUser }) {
                         setPasswordError('')
                     }
                     else{
-                        setCredentialError('Wrong username and/or password. Please try again')
+                        setCredentialError('Wrong email and/or password. Please try again')
                         setEmailError('')
                         setPasswordError('')
                     }
@@ -81,13 +81,13 @@ function Signin({ onRouteChange, loadUser }) {
                                 <p style={{color: 'red'}}>{PasswordError}</p>
                             </div>
                             <p style={{ color: 'red' }}>{CredentialError}</p>
-                            <button onClick={onSubmitSignIn} className="button login__submit">
-                                <span>Log In Now</span>
+                            <button style={{marginTop: '0', padding: '12px'}} onClick={onSubmitSignIn} className="button login__submit">
+                                <span style={{paddingLeft: '5px'}}>Log In Now</span>
                                 <i className='button__icon'><FaChevronRight /></i>
                             </button>
                         </div>
                         <div className="NewMemberText">
-                            <h3>New Member?</h3>
+                            <h5 style={{marginTop: '30px'}}>New Member?</h5>
                             <div className="RegisterClick">
                                 <p onClick={() => onRouteChange('register')}>Register</p>
                             </div>

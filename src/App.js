@@ -6,6 +6,7 @@ import Register from './components/Register/Register';
 import Signin from './components/Signin/Signin';
 import SocialMediaBar from './components/SocialMediaBar/SocialMediaBar';
 import Profile from './components/Profile/Profile';
+import Password from './components/Password/Password';
 import './App.css';
 
 
@@ -24,7 +25,7 @@ const initialState = {
     joined: ''
   }
 }
-// const newJoinedDate = initialState.user.joined.toString().substring(0, initialState.user.joined.length -1)
+
 class App extends Component {
   constructor() {
     super();
@@ -126,8 +127,11 @@ class App extends Component {
             route === 'Signin'
               ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
               :(route ==='Profile'
-                ? <Profile name={user.name} email={user.email} entries={user.entries} joined={user.joined} loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
-                : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
+                ? <Profile name={user.name} email={user.email} entries={user.entries} joined={user.joined} id={user.id }loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
+                : (route === 'Password'
+                    ? <Password id={user.id} onRouteChange={this.onRouteChange} />
+                    : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
+                  )
                 )
           )}
 
