@@ -20,8 +20,8 @@ function Profile({ loadUser, onRouteChange, entries, name, email, joined, id }) 
             setNameError('')
             setEmailError('')
             event.preventDefault()
-            // fetch('https://lit-taiga-06669.herokuapp.com/register', {
-            fetch(`http://localhost:3003/profile/${id}`, {
+             fetch(`https://lit-taiga-06669.herokuapp.com/profile/${id}`, {
+            //fetch(`http://localhost:3003/profile/${id}`, {
                 method: 'put',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify({
