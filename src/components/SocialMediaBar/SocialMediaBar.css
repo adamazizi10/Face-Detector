@@ -18,7 +18,37 @@
     display: flex;
     flex-direction: column;
     padding: 0;
-    margin: 0
+    margin: 0;
+   
+}
+@media screen and (max-width: 800px) {
+    .mf-social-side-list{
+        padding-left: 155px;
+        padding-top: 360px;
+    
+    }  
+}
+
+@media screen and (max-width: 800px) {
+    .socialul{
+
+        rotate: 90deg; 
+        gap: 0px;
+        
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .eaachSocialul{
+        -webkit-transform:rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        transform: rotate(270deg);
+        
+    }
+    
 }
 
 .mf-social-side-list ul li a {
@@ -35,6 +65,7 @@
     -webkit-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    
 }
 
 .mf-social-side-list ul li a:hover {

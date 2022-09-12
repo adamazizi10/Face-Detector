@@ -7,6 +7,13 @@
 	padding-top: 25%;
 	padding-bottom: 1%;
 	/* background: linear-gradient(90deg, #C7C5F4, #776BCC); */
+
+}
+@media screen and (max-width: 800px) {
+	.containerSignin {
+		margin-left: 360px;
+		padding-top: 80px;
+	}
 }
 .containerProfile {
 	display: flex;
@@ -17,6 +24,7 @@
 	/* background: linear-gradient(90deg, #C7C5F4, #776BCC); */
 }
 
+
 .screen {
 
 	background: linear-gradient(90deg, #18b3da, #09d0da);
@@ -25,6 +33,7 @@
 	width: 360px;
 	box-shadow: 0px 0px 24px #09d0da;
 }
+
 .screenProfile {
 
 	background: linear-gradient(90deg, #18b3da, #09d0da);
