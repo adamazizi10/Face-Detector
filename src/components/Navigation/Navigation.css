@@ -20,9 +20,6 @@
 }
 
 
-
-
-
 .pNav {
   font-size: 1em;
   color: #524851;
@@ -60,6 +57,7 @@ footer {
   font-size: 1.2em;
 }
 
+
 #header-img {
   padding-right: 15px;
   height: 50px;
@@ -91,10 +89,6 @@ footer {
  
 }
 
-.colorForNavText {
-  color: black;
-}
-
 .nav-link {
   display: flex;
   justify-content: center;
@@ -123,7 +117,9 @@ footer {
   background: #29abb5;
   color: white;
 }
-
+.colorForNavText{
+  color: black
+}
 #submit:hover {
   transform: scale(0.97);
 }

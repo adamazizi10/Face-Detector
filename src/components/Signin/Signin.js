@@ -67,9 +67,9 @@ function Signin({ onRouteChange, loadUser }) {
     return (
         <div>
             <div className="containerSignin">
-                <div className="screen">
-                    <div className="screen__content">
-                        <div className="login">
+                <div className="screenS">
+                    <div className="screen__contentS">
+                        <div className="loginP">
                             <div className="login__field">
                                 <i className="login__icon"><FaEnvelope /></i>
                                 <input onChange={onEmailChange} type="text" className="login__input" placeholder="Enter your Email" />
@@ -83,7 +83,7 @@ function Signin({ onRouteChange, loadUser }) {
                             <p style={{ color: 'red' }}>{CredentialError}</p>
                             <button style={{marginTop: '0', padding: '12px'}} onClick={onSubmitSignIn} className="button login__submit">
                                 <span style={{paddingLeft: '5px'}}>Log In Now</span>
-                                <i className='button__icon'><FaChevronRight /></i>
+                                <i className='button__iconR'><FaChevronRight /></i>
                             </button>
                         </div>
                         <div className="NewMemberText">
@@ -93,11 +93,11 @@ function Signin({ onRouteChange, loadUser }) {
                             </div>
                         </div>
                     </div>
-                    <div className="screen__background">
-                        <span className="screen__background__shape screen__background__shape4"></span>
-                        <span className="screen__background__shape screen__background__shape3"></span>
-                        <span className="screen__background__shape screen__background__shape2"></span>
-                        <span className="screen__background__shape screen__background__shape1"></span>
+                    <div className="screen__backgroundS">
+                        <span className="screen__background__shape screen__background__shape4S"></span>
+                        <span className="screen__background__shape screen__background__shape3S"></span>
+                        <span className="screen__background__shape screen__background__shape2S"></span>
+                        <span className="screen__background__shape screen__background__shape1S"></span>
                     </div>
                 </div>
             </div>

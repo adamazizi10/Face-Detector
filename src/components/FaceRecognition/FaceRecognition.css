@@ -6,6 +6,15 @@
    justify-content: center;
    cursor: pointer;
 }
+.picDevice{
+   width: 500px;
+}
+@media screen and (max-device-width:500px), screen and (max-width:500px) {
+	.bounding-box-FaceRec {
+
+     
+   }
+}
 
 .ImageFixFaceRec {
    bottom: 0;

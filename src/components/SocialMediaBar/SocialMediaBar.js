@@ -5,7 +5,7 @@ import './SocialMediaBar.css';
 const SocialMediaBar = () => {
     return (
         <div className="SocialMediaDiv">
-        <div className="mf-social-side-list">
+        {/* <div className="mf-social-side-list">
             <ul className="socialul">
                 <li className="eaachSocialul">
                     <a href="https://www.linkedin.com/in/adamazizi/" rel="noreferrer" target="_blank">
@@ -23,7 +23,7 @@ const SocialMediaBar = () => {
                     </a>
                 </li>
             </ul>
-        </div>
+        </div> */}
     </div>
 
     );

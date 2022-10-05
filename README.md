@@ -1,6 +1,3 @@
-# Face Detector Frontend
-A fully Functional Face detection web application that detects the face on any given image. The backend repository is private due to security reasons however, I am using node.js and express.js for anyone that is curious
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -17,22 +17,9 @@ body {
   
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-device-width:450px), screen and (max-width:450px) {
 	body {
-    max-width: 8%;
-    margin: 0;
-    font-family: "Courier new", Courier, monospace;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 3rem;
-    padding-bottom: 0px;
-    background: linear-gradient(rgba(9, 208, 218, 1) 100%, rgba(24, 179, 218, 1) 100%);
-    height: auto;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
+    background-color: black;
 	}
 }
 

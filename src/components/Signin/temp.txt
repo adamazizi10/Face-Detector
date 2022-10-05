@@ -20,7 +20,7 @@
 }
 
 
-.screenS {
+.screen {
 
 	background: linear-gradient(90deg, #18b3da, #09d0da);
 	position: relative;
@@ -28,7 +28,7 @@
 	box-shadow: 0px 0px 24px #09d0da;
 }
 @media screen and (max-device-width:651px), screen and (max-width:651px) {
-	.screenS {
+	.screen {
 		background: linear-gradient(90deg, rgba(41,201,42,1) 0%, rgba(41,233,185,1) 0%);
 		height: 600px;
 		border-radius: 20px;
@@ -51,7 +51,7 @@
 	box-shadow: 0px 0px 24px #09d0da;
 }
 
-.screen__contentS {
+.screen__content {
 	z-index: 1;
 	position: relative;
 	height: 100%;
@@ -62,7 +62,7 @@
 	height: 100%;
 }
 
-.screen__backgroundS {
+.screen__background {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -73,17 +73,17 @@
 	clip-path: inset(0 0 0 0);
 }
 
-.screen__background__shapeS {
+.screen__background__shape {
 	position: absolute;
 	transform: none;
 }
 
 @media screen and (min-device-width:650px), screen and (min-width:650px) {
 	
-	.screen__background__shapeS {
+	.screen__background__shape {
 		transform: rotate(45deg);
 	}
-	.screen__background__shape1S {
+	.screen__background__shape1 {
 		height: 520px;
 		width: 520px;
 		background: #98fff1;
@@ -92,7 +92,7 @@
 		border-radius: 0 72px 0 0;
 	}
 	
-	.screen__background__shape2S {
+	.screen__background__shape2 {
 		height: 220px;
 		width: 220px;
 		background: linear-gradient(94deg, rgba(2, 0, 36, 1) 0%, rgba(9, 208, 218, 1) 0%, rgba(13, 218, 118, 1) 96%, rgba(24, 179, 218, 1) 100%);
@@ -101,7 +101,7 @@
 		border-radius: 32px;
 	}
 	
-	.screen__background__shape3S {
+	.screen__background__shape3 {
 		height: 540px;
 		width: 190px;
 		background: linear-gradient(rgba(2, 0, 36, 1) 0%, rgba(24, 179, 218, 1) 0%, rgba(13, 218, 118, 1) 0%, rgba(9, 208, 218, 1) 100%);
@@ -111,7 +111,7 @@
 		z-index: -1;
 	}
 	
-	.screen__background__shape4S {
+	.screen__background__shape4 {
 		height: 400px;
 		width: 200px;
 		background: linear-gradient(94deg, rgba(2, 0, 36, 1) 0%, rgba(24, 179, 218, 1) 0%, rgba(13, 218, 118, 1) 0%, rgba(9, 208, 218, 1) 100%);
@@ -138,21 +138,6 @@
 
 @media screen and (max-device-width:320px), screen and (max-width:320px) {
 	.login {
-		width: 300px;
-		padding: 30px;
-		padding-top: 156px;
-	}
-		}
-
-
-.loginP {
-	width: 350px;
-	padding: 30px;
-	padding-top: 156px;
-}
-
-@media screen and (max-device-width:360px), screen and (max-width:360px) {
-	.loginP {
 		width: 300px;
 		padding: 30px;
 		padding-top: 156px;

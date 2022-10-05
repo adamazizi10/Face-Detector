@@ -104,9 +104,9 @@ return(
 
         <div>
              <div className="containerSignin">
-                <div className="screen">
-                    <div className="screen__content">
-                        <div className="login">
+                <div className="screenS">
+                    <div className="screen__contentS">
+                        <div className="loginP">
                             {displayPasswordChangedConfirmation === ''
                             ? <div><div className="login__field">
                                 <i className="login__icon"><FaLock /></i>
@@ -137,11 +137,11 @@ return(
             
                         
                     </div>
-                    <div className="screen__background">
-                        <span className="screen__background__shape screen__background__shape4"></span>
-                        <span className="screen__background__shape screen__background__shape3"></span>
-                        <span className="screen__background__shape screen__background__shape2"></span>
-                        <span className="screen__background__shape screen__background__shape1"></span>
+                    <div className="screen__backgroundS">
+                        <span className="screen__background__shape screen__background__shape4S"></span>
+                        <span className="screen__background__shape screen__background__shape3S"></span>
+                        <span className="screen__background__shape screen__background__shape2S"></span>
+                        <span className="screen__background__shape screen__background__shape1S"></span>
                     </div>
                 </div>
             </div>

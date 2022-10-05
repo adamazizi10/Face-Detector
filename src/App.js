@@ -54,6 +54,7 @@ class App extends Component {
       topRow: clarafaiFace.top_row * height,
       rightCol: width - (clarafaiFace.right_col * width),
       bottomRow: height - (clarafaiFace.bottom_row * height)
+
     }
   }
 

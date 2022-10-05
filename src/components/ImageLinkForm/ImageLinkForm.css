@@ -20,19 +20,11 @@
 .pImg {
   font-size: 1em;
   color: #524851;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 
-
-.mainForImg {
-  padding-top: 5%;
-  width: 1200px;
-  line-height: 145%;
-
-
-
-
-}
 
 
 
@@ -116,7 +108,7 @@ label {
 }
 
 .emailForImgLink {
-  width: 60%;
+  width: 100%;
   height: 25px;
   margin-top: 10px;
   border: none;
@@ -124,9 +116,48 @@ label {
   background: transparent;
 }
 
+
 .emailForImgLink:focus {
   outline: none;
 }
+
+@media screen and (max-device-width:10000px), screen and (max-width:10000px) {
+	.emailForImgLink {
+    width: 800px;
+	}
+  .detectButtonB{
+    width: 500px;
+    
+  }
+}
+@media screen and (max-device-width:800px), screen and (max-width:800px) {
+	.emailForImgLink {
+    width: 450px;
+	}
+  .detectButtonB{
+    width: 350px;
+
+  }
+}
+@media screen and (max-device-width:450px), screen and (max-width:450px) {
+	.emailForImgLink {
+    width: 290px;
+	}
+  .detectButtonB{
+    width: 200px;
+  }
+}
+
+@media screen and (max-device-width:290px), screen and (max-width:290px) {
+	.emailForImgLink {
+    width: 150px;
+	}
+  .detectButtonB{
+    width: 100px;
+
+  }
+}
+
 
 .form-title {
   text-align: center;

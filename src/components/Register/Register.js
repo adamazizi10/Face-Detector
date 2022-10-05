@@ -104,10 +104,10 @@ function Register({ loadUser, onRouteChange }) {
     }
     return (
         <div>
-            <div className="containerRegister" >
-                <div className="screen" >
-                    <div className="screen__content"  >
-                        <div className="RegisterForm" style={{paddingTop: '70px'}}>
+            <div className="containerRegisterR" >
+                <div className="screenR" >
+                    <div className="screen__contentR"  >
+                        <div className="loginP" style={{paddingTop: '70px'}}>
                             <div className="login__field" >
                                 <i className="login__icon"><FaUser /></i>
                                 <input type="text" className="login__input" placeholder="Enter your Name" onChange={onRegisterNameChange} />
@@ -137,11 +137,11 @@ function Register({ loadUser, onRouteChange }) {
                         </div>
                         {PasswordErrorInfo}
                     </div>
-                    <div className="screen__background">
-                        <span className="screen__background__shape screen__background__shape4"></span>
-                        <span className="screen__background__shape screen__background__shape3"></span>
-                        <span className="screen__background__shape screen__background__shape2"></span>
-                        <span className="screen__background__shape screen__background__shape1"></span>
+                    <div className="screen__backgroundS">
+                        <span className="screen__background__shape screen__background__shape4S"></span>
+                        <span className="screen__background__shape screen__background__shape3S"></span>
+                        <span className="screen__background__shape screen__background__shape2S"></span>
+                        <span className="screen__background__shape screen__background__shape1S"></span>
                     </div>
                 </div>
             </div>

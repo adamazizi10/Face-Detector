@@ -10,13 +10,13 @@ function Navigation ({ onRouteChange, isSignedIn, route}) {
                 <div id="title">
                     {isSignedIn
                     ?<div style={{display: 'flex'}}>
-                        <img alt='' onClick={() => onRouteChange('home')}  className='pointer' src={faceDetectPic} id="header-img" />
-                        <h1 onClick={() => onRouteChange('home')} className='colorForNavText pointer'>Face Detector </h1>
+                        <img alt=''  onClick={() => onRouteChange('home')}  className='pointer' src={faceDetectPic} id="header-img" />
+                        <h1 onClick={() => onRouteChange('home')} className='colorForNavText displayNoneTitle pointer'>Face Detector </h1>
                      </div>
 
                     :<div style={{display: 'flex'}}>
                         <img alt='' onClick={() => onRouteChange('Signin')}  className='pointer' src={faceDetectPic} id="header-img" />
-                        <h1 onClick={() => onRouteChange('Signin')} className='colorForNavText pointer'>Face Detector </h1>
+                        <h1 onClick={() => onRouteChange('Signin')} className='colorForNavText displayNoneTitle pointer'>Face Detector </h1>
                      </div>
                     }
                 </div>

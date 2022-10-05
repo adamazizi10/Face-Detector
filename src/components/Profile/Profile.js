@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../Register/Register.css';
+
+import '../Signin/Signin.css'
 import { FaEnvelope, FaUser, FaRegPlusSquare, FaCalendarAlt } from 'react-icons/fa';
 import CustomFunctions from '../../CustomFunctions/CustomFunctions';
 
@@ -55,9 +56,9 @@ function Profile({ loadUser, onRouteChange, entries, name, email, joined, id }) 
     return (
         <div>
             <div className="containerProfile" >
-                <div className="screenProfile" >
-                    <div className="screen__contentProfile" >
-                        <div  style={{paddingTop: '30px'}} className="UpdateFormProfile">
+                <div className="screenS" >
+                    <div className="screen__contentS" >
+                        <div  style={{paddingTop: '30px'}} className="loginP">
                             <div className="login__fieldProfile" >
                                 <i className="login__iconProfile"><FaUser /></i>
                                 <input type="text" className="login__inputProfile" defaultValue={Name} onChange={onRegisterNameChange} />
@@ -77,19 +78,19 @@ function Profile({ loadUser, onRouteChange, entries, name, email, joined, id }) 
                                 <input type="email" className="login__inputProfile" readOnly defaultValue={`Joined: ${joined.substring(0, joined.length - 14)}`} />
                             </div>
 
-                            <button style={{ marginTop: '10px' }}  onClick={onUpdateClick} className="buttonProfile login__submitProfile">
+                            <button style={{ marginTop: '10px' }}  onClick={onUpdateClick} className="button login__submit">
                                 <span style={{ paddingTop: '0', marginTop: '0' }} className="button__textProfile">Update</span>
                             </button>
-                            <button onClick={() => onRouteChange('home')} style={{display: 'inline'}} className="buttonProfile login__submitProfile">
+                            <button onClick={() => onRouteChange('home')} style={{display: 'inline'}} className="button login__submit">
                              <span>Cancel</span>
                           </button>
                         </div>
                     </div>
-                    <div className="screen__background">
-                        <span className="screen__background__shape screen__background__shape4"></span>
-                        <span className="screen__background__shape screen__background__shape3"></span>
-                        <span className="screen__background__shape screen__background__shape2"></span>
-                        <span className="screen__background__shape screen__background__shape1"></span>
+                    <div className="screen__backgroundS">
+                        <span className="screen__background__shape screen__background__shape4S"></span>
+                        <span className="screen__background__shape screen__background__shape3S"></span>
+                        <span className="screen__background__shape screen__background__shape2S"></span>
+                        <span className="screen__background__shape screen__background__shape1S"></span>
                     </div>
                 </div>
             </div>
