@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Face Detector Full Stack Website
+This is a full stack website that detects a face on a given image.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started
+  Go to: https://adamazizi10.github.io/face-detector/
+* This is a full-stack website created using
+  * Reactjs for the frontend
+  * Node.js and Express.js for the backend
+  * PostgreSQL for the database  
+* Developed a fully functional Web App that uses a Face Recognition API to detect the face on any image
+* Implemented a login/register system with Frontend & Backend validations for additional layers of security
+* Created profile pages for users to keep track of their detection entries, change password, and view information
 
-## Available Scripts
+# Landing Page
+<img width="1509" alt="image" src="https://user-images.githubusercontent.com/106051947/194844446-e3aed4b2-9c14-4267-9516-7ef111107254.png">
 
-In the project directory, you can run:
+# Register if you are a new member
+Click either of the following two to be taken to the register page:
 
-### `npm start`
+<img width="1511" alt="Screen Shot 2022-10-10 at 6 22 18 AM" src="https://user-images.githubusercontent.com/106051947/194845834-a68413fb-7d8c-4b80-814a-dc94fd623666.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Fill out your information and click 'Register'
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="1510" alt="image" src="https://user-images.githubusercontent.com/106051947/194846081-2e2b6687-87af-4d39-a9d3-8c45e3cebee3.png">
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+# Login if you are an existing member
+<img width="1511" alt="image" src="https://user-images.githubusercontent.com/106051947/194845050-e8ea0be4-f148-46d9-a584-79ef6bfd9584.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# You will be redirected to the homepage after Register or Login
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="1512" alt="image" src="https://user-images.githubusercontent.com/106051947/194846542-2ca0c95d-c2c9-4311-9eb7-d620fa9c1538.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Enter any image link and click 'Detect'
 
-### `npm run eject`
+<img width="1512" alt="image" src="https://user-images.githubusercontent.com/106051947/194846781-2317670a-011c-4950-9034-2c01fe4d45d7.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# For more functionalities, click on 'Account' on the top right corner
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="289" alt="image" src="https://user-images.githubusercontent.com/106051947/194847245-dfc470c4-9e3a-4ac7-9d66-67896289addc.png">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# To view or change profile info, click on 'Profile'
+What can be viewed or changed:
+* Name
+* Email
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+What can be viewed:
+* Joined Date
+* Detection Count (How many images has the user detected)
+ 
+<img width="1512" alt="image" src="https://user-images.githubusercontent.com/106051947/194847836-d9832cf6-6f99-40c9-b1f9-485883d8aa7e.png">
 
-## Learn More
+# To change password, click 'Change password' on the 'Account Dropdown'
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Enter a new valid password and click 'update password':
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="1503" alt="image" src="https://user-images.githubusercontent.com/106051947/194848035-b485efea-9688-4a35-9429-a1698c9307e8.png">
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# End of User Guide
