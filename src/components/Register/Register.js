@@ -45,8 +45,8 @@ function Register({ loadUser, onRouteChange }) {
             setPasswordConfirmError('')
             setDifferentPasswordError('')
             event.preventDefault()
-            fetch('https://lit-taiga-06669.herokuapp.com/register', {
-            // fetch('http://localhost:3003/register', {
+            // fetch('https://lit-taiga-06669.herokuapp.com/register', {
+            fetch('http://localhost:3003/register', {
                 method: 'post',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify({
