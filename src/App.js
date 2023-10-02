@@ -69,7 +69,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch('https://lit-taiga-06669.herokuapp.com/imageurl', {
+    fetch('https://enigmatic-garden-12257.herokuapp.com/imageurl', {
       // fetch('http://localhost:3003/imageurl', {  
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
@@ -80,7 +80,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://lit-taiga-06669.herokuapp.com/image', {
+          fetch('https://enigmatic-garden-12257.herokuapp.com/image', {
             // fetch('http://localhost:3003/image', {
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
