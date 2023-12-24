@@ -1,15 +1,15 @@
 # Face Detector Full Stack Website
-This is a full stack website that detects a face on a given image.
-
 # Getting Started
   Go to: https://adamazizi10.github.io/face-detector/
-* This is a full-stack website created using
+* This is a full stack website that detects a face on a given image. Technologies used are the following:
   * Reactjs for the frontend
   * Node.js and Express.js for the backend
   * PostgreSQL for the database  
-* Developed a fully functional Web App that uses a Face Recognition API to detect the face on any image
-* Implemented a login/register system with Frontend & Backend validations for additional layers of security
-* Created profile pages for users to keep track of their detection entries, change password, and view information
+## More Details
+* This is a fully functional Web App that performs Face Recognition on any image
+* It also has a login/register system with Frontend & Backend validations for additional layers of security
+* It has profile pages for users to keep track of their detection entries, change password, and view information
+* Password hashing is implemented to ensure data security
 
 # Landing Page
 <img width="1509" alt="image" src="https://user-images.githubusercontent.com/106051947/194844446-e3aed4b2-9c14-4267-9516-7ef111107254.png">
