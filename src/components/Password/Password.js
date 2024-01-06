@@ -39,7 +39,7 @@ function Password({id, onRouteChange}){
             setDifferentPasswordError('')
             setBackendError('')
             event.preventDefault()
-            fetch(`https://enigmatic-garden-12257.herokuapp.com/profile/password/${id}`, {
+            fetch(`https://lit-taiga-06669.herokuapp.com/profile/password/${id}`, {
             // fetch(`http://localhost:3003/profile/password/${id}`, {
                 method: 'put',
                 headers: { 'content-type': 'application/json' },
