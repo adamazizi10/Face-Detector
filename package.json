@@ -1,6 +1,5 @@
 {
   "name": "face-detector-frontend",
-  "homepage": "https://adamazizi10.github.io/face-detector",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
