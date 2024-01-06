@@ -1,6 +1,6 @@
 # Face Detector Full Stack Website
 # Getting Started
-  Go to: https://adamazizi10.github.io/face-detector/
+  Go to: https://www.face-detector.live/
 * This is a full stack website that detects a face on a given image. Technologies used are the following:
   * Reactjs for the frontend
   * Node.js and Express.js for the backend
