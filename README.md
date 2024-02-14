@@ -4,7 +4,9 @@
 * This is a full stack website that detects a face on a given image. Technologies used are the following:
   * Reactjs for the frontend
   * Node.js and Express.js for the backend
-  * PostgreSQL for the database  
+  * PostgreSQL for the database
+  * Bcrypt for password hashing
+    
 ## More Details
 * This is a fully functional Web App that performs Face Recognition on any image
 * It also has a login/register system with Frontend & Backend validations for additional layers of security
