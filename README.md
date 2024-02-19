@@ -6,6 +6,8 @@
   * Node.js and Express.js for the backend
   * PostgreSQL for the database
   * Bcrypt for password hashing
+ 
+The backend for this application can be found here: https://github.com/adamazizi10/FaceDetector-Backend
     
 ## More Details
 * This is a fully functional Web App that performs Face Recognition on any image
