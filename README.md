@@ -6,6 +6,8 @@
   * Node.js and Express.js for the backend
   * PostgreSQL for the database
   * Bcrypt for password hashing
+  * Demo Email: `demouser@gmail.com`
+  * Demo Password: `Demouser1#`
  
 The backend for this application can be found here: https://github.com/adamazizi10/FaceDetector-Backend
     
