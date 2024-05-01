@@ -16,7 +16,7 @@ The backend for this application can be found here: https://github.com/adamazizi
 * Password hashing is implemented to ensure data security
 
 # Landing Page
-<img width="1509" alt="image" src="https://user-images.githubusercontent.com/106051947/194844446-e3aed4b2-9c14-4267-9516-7ef111107254.png">
+<img width="1509" alt="image landing" src="https://user-images.githubusercontent.com/106051947/194844446-e3aed4b2-9c14-4267-9516-7ef111107254.png">
 
 # Register if you are a new member
 Click either of the following two to be taken to the register page:
